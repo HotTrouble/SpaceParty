@@ -203,7 +203,7 @@ if(speed&gt;0)
         
         if(hexX==player_ship.hexX &amp;&amp; hexY==player_ship.hexY)
         {
-            room_goto(lose);
+            room_goto(captain_lose);
         }
     }
     else

@@ -8,28 +8,24 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="6" enumb="50">
       <action>
         <libid>1</libid>
-        <id>211</id>
+        <id>224</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_sound</functionname>
+        <functionname>action_another_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>6</kind>
-            <sound>voyage</sound>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>1</string>
+            <kind>11</kind>
+            <room>engineer_play</room>
           </argument>
         </arguments>
       </action>

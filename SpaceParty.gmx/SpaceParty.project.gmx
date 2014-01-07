@@ -8,14 +8,31 @@
     <sound>sound\voyage</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\mainChar</sprite>
-    <sprite>sprites\console_spr</sprite>
-    <sprite>sprites\scout_spr</sprite>
-    <sprite>sprites\hexagon_spr</sprite>
-    <sprite>sprites\ships_spr</sprite>
-    <sprite>sprites\openhexagon_spr</sprite>
-    <sprite>sprites\earth_spr</sprite>
-    <sprite>sprites\mars_spr</sprite>
+    <sprites name="captain">
+      <sprite>sprites\hexagon_spr</sprite>
+      <sprite>sprites\ships_spr</sprite>
+      <sprite>sprites\openhexagon_spr</sprite>
+      <sprite>sprites\earth_spr</sprite>
+      <sprite>sprites\mars_spr</sprite>
+    </sprites>
+    <sprites name="engineer">
+      <sprite>sprites\gray_spr</sprite>
+      <sprite>sprites\gray2_spr</sprite>
+      <sprite>sprites\gray3_spr</sprite>
+      <sprite>sprites\red_spr</sprite>
+      <sprite>sprites\orange_spr</sprite>
+      <sprite>sprites\yellow_spr</sprite>
+      <sprite>sprites\green_spr</sprite>
+      <sprite>sprites\blue_spr</sprite>
+      <sprite>sprites\purple_spr</sprite>
+    </sprites>
+    <sprites name="ship">
+      <sprite>sprites\mainChar</sprite>
+      <sprite>sprites\console_spr</sprite>
+      <sprite>sprites\scout_spr</sprite>
+    </sprites>
+    <sprite>sprites\scbutton</sprite>
+    <sprite>sprites\sebutton</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\titlescreen</background>
@@ -29,28 +46,60 @@
     <script>scripts\Expand_Grid.gml</script>
     <script>scripts\Move_Ship.gml</script>
     <script>scripts\getTilePosition.gml</script>
-    <script>scripts\flip.gml</script>
-    <script>scripts\colorHex.gml</script>
-    <script>scripts\spawnEnemy.gml</script>
-    <script>scripts\enemyMove.gml</script>
+    <scripts name="captain">
+      <script>scripts\flip.gml</script>
+      <script>scripts\colorHex.gml</script>
+      <script>scripts\spawnEnemy.gml</script>
+      <script>scripts\enemyMove.gml</script>
+    </scripts>
+    <scripts name="engineer">
+      <script>scripts\checkMatches.gml</script>
+      <script>scripts\checkMatch.gml</script>
+      <script>scripts\clearTile.gml</script>
+      <script>scripts\upgradeTile.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\player</object>
-    <object>objects\console</object>
-    <object>objects\scout</object>
     <object>objects\title_control</object>
-    <object>objects\play_control</object>
-    <object>objects\win_control</object>
-    <object>objects\lose_control</object>
-    <object>objects\hexagon</object>
-    <object>objects\player_ship</object>
-    <object>objects\enemy_ship</object>
+    <objects name="captain">
+      <object>objects\captain_title_control</object>
+      <object>objects\play_control</object>
+      <object>objects\win_control</object>
+      <object>objects\lose_control</object>
+      <object>objects\hexagon</object>
+      <object>objects\player_ship</object>
+      <object>objects\enemy_ship</object>
+    </objects>
+    <objects name="title">
+      <object>objects\captain_button</object>
+      <object>objects\engineer_button</object>
+    </objects>
+    <objects name="ship">
+      <object>objects\player</object>
+      <object>objects\console</object>
+      <object>objects\scout</object>
+    </objects>
+    <objects name="engineer">
+      <object>objects\engineer_play_control</object>
+      <object>objects\engineer_win_control</object>
+      <object>objects\engineer_lose_control</object>
+      <object>objects\tile</object>
+      <object>objects\nextTile</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
-    <room>rooms\play</room>
-    <room>rooms\win</room>
-    <room>rooms\lose</room>
+    <rooms name="captain">
+      <room>rooms\captain_title</room>
+      <room>rooms\captain_play</room>
+      <room>rooms\captain_win</room>
+      <room>rooms\captain_lose</room>
+    </rooms>
+    <rooms name="engineer">
+      <room>rooms\engineer_play</room>
+      <room>rooms\engineer_win</room>
+      <room>rooms\engineer_lose</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
