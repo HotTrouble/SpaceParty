@@ -30,15 +30,21 @@
       <sprite>sprites\mainChar</sprite>
       <sprite>sprites\console_spr</sprite>
       <sprite>sprites\scout_spr</sprite>
+      <sprite>sprites\station_spr</sprite>
+      <sprite>sprites\reactor_spr</sprite>
     </sprites>
-    <sprite>sprites\scbutton</sprite>
-    <sprite>sprites\sebutton</sprite>
+    <sprites name="title">
+      <sprite>sprites\scbutton</sprite>
+      <sprite>sprites\sebutton</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\titlescreen</background>
     <background>background\winScreen</background>
     <background>background\spaceBackground</background>
     <background>background\loseScreen</background>
+    <background>background\engineer_win_bg</background>
+    <background>background\engineer_lose_bg</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -78,6 +84,8 @@
       <object>objects\player</object>
       <object>objects\console</object>
       <object>objects\scout</object>
+      <object>objects\station</object>
+      <object>objects\reactor</object>
     </objects>
     <objects name="engineer">
       <object>objects\engineer_play_control</object>
