@@ -1,0 +1,10 @@
+Version of workspace file format:
+               1
+Time of storage:
+               "Fri Jan 10 23:39:06 Central Standard Time 2014"
+Name of the workspace:
+               "SpaceParty-workspace"
+File paths of contained packages:
+               ["SpacePartyServer\\SpacePartyServer.cabal"]
+Maybe file path of an active package:
+               Just "SpacePartyServer\\SpacePartyServer.cabal"

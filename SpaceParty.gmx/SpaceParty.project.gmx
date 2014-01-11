@@ -6,6 +6,9 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\voyage</sound>
+    <sound>sound\sweat_drops</sound>
+    <sound>sound\match_snd</sound>
+    <sound>sound\purplematch_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="captain">
@@ -68,7 +71,6 @@
   <objects name="objects">
     <object>objects\title_control</object>
     <objects name="captain">
-      <object>objects\captain_title_control</object>
       <object>objects\play_control</object>
       <object>objects\win_control</object>
       <object>objects\lose_control</object>
@@ -93,12 +95,19 @@
       <object>objects\engineer_lose_control</object>
       <object>objects\tile</object>
       <object>objects\nextTile</object>
+      <objects name="achievements">
+        <object>objects\ach_red</object>
+        <object>objects\ach_orange</object>
+        <object>objects\ach_yellow</object>
+        <object>objects\ach_green</object>
+        <object>objects\ach_blue</object>
+        <object>objects\ach_purple</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
     <rooms name="captain">
-      <room>rooms\captain_title</room>
       <room>rooms\captain_play</room>
       <room>rooms\captain_win</room>
       <room>rooms\captain_lose</room>
