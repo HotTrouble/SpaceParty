@@ -3,8 +3,8 @@ module TcpServer
  server
 ) where
 
-import Network (listenOn, PortID(PortNumber))
-import Network.Socket hiding (recv)
+import Network (PortID(PortNumber))
+import Network.Socket (Socket(..), socket, bind, listen)
 import qualified Network.Socket.ByteString as NSB
 import qualified Network.Socket.ByteString.Lazy as NSBL
 import Network.Socket.ByteString (sendAll, recv)
@@ -36,7 +36,11 @@ server host port handleRequest = withSocketsDo $ do
         sClose sock
 
 initSocket :: String -> PortNumber -> IO(Socket)
-initSocket host port = listenOn $ PortNumber port
+initSocket host port = do
+  let sock = socket AF_INET Stream defaultProtocol
+  let addr = SockAddrInet (PortNumber port) host
+  bind sock addr
+  listen sock 1
 
 acceptAndProcess :: Socket -> (Socket-> IO()) -> IO()
 acceptAndProcess sock handleRequest = do
