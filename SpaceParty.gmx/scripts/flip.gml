@@ -47,7 +47,7 @@ if(
             
     if(sprite_index==earth_spr)
     {
-        room_goto(captain_win);
+        ChangeRoom(captain_win);
     }
     else if(sprite_index==mars_spr)
     {

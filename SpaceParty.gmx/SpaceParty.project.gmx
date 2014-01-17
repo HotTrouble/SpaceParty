@@ -40,6 +40,7 @@
       <sprite>sprites\scbutton</sprite>
       <sprite>sprites\sebutton</sprite>
     </sprites>
+    <sprite>sprites\back_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\titlescreen</background>
@@ -55,6 +56,8 @@
     <script>scripts\Expand_Grid.gml</script>
     <script>scripts\Move_Ship.gml</script>
     <script>scripts\getTilePosition.gml</script>
+    <script>scripts\ChangeRoom.gml</script>
+    <script>scripts\FixView.gml</script>
     <scripts name="captain">
       <script>scripts\flip.gml</script>
       <script>scripts\colorHex.gml</script>
@@ -69,7 +72,12 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\title_control</object>
+    <object>objects\back_button</object>
+    <objects name="title">
+      <object>objects\title_control</object>
+      <object>objects\captain_button</object>
+      <object>objects\engineer_button</object>
+    </objects>
     <objects name="captain">
       <object>objects\play_control</object>
       <object>objects\win_control</object>
@@ -77,10 +85,6 @@
       <object>objects\hexagon</object>
       <object>objects\player_ship</object>
       <object>objects\enemy_ship</object>
-    </objects>
-    <objects name="title">
-      <object>objects\captain_button</object>
-      <object>objects\engineer_button</object>
     </objects>
     <objects name="ship">
       <object>objects\player</object>
