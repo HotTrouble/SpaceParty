@@ -70,13 +70,22 @@
       <script>scripts\clearTile.gml</script>
       <script>scripts\upgradeTile.gml</script>
     </scripts>
+    <scripts name="network">
+      <script>scripts\InitNetwork.gml</script>
+      <script>scripts\Where.gml</script>
+      <script>scripts\Who.gml</script>
+      <script>scripts\Join.gml</script>
+      <script>scripts\ReceiveNetwork.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
+    <object>objects\init_control</object>
     <object>objects\back_button</object>
     <objects name="title">
       <object>objects\title_control</object>
       <object>objects\captain_button</object>
       <object>objects\engineer_button</object>
+      <object>objects\qexil_button</object>
     </objects>
     <objects name="captain">
       <object>objects\play_control</object>
@@ -108,8 +117,12 @@
         <object>objects\ach_purple</object>
       </objects>
     </objects>
+    <objects name="qexil">
+      <object>objects\qexil_ships_control</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\init</room>
     <room>rooms\title</room>
     <rooms name="captain">
       <room>rooms\captain_play</room>
@@ -121,7 +134,17 @@
       <room>rooms\engineer_win</room>
       <room>rooms\engineer_lose</room>
     </rooms>
+    <rooms name="qexil">
+      <room>rooms\qexil_ships</room>
+    </rooms>
   </rooms>
+  <constants number="5">
+    <constant name="JOIN">74</constant>
+    <constant name="WHO">79</constant>
+    <constant name="WHERE">87</constant>
+    <constant name="serverHost">"blanu.net"</constant>
+    <constant name="serverPort">5847</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

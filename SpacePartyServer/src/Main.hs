@@ -18,4 +18,3 @@ process sock = do
   sent <- send sock $ show addr
   --(SockAddrInet port addr)
   return ()
-
