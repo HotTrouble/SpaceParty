@@ -4,7 +4,7 @@ dest=argument0;
 
 window_set_color(c_black);
 
-if(os_type==os_android)
+if(os_type==os_android || os_type==os_tizen)
 {
   show_debug_message("Resizing for Android");
   dw=display_get_width();
