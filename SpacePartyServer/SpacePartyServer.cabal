@@ -12,17 +12,22 @@ executable SpacePartyServer
       base -any,
       QuickCheck -any,
       bytestring,
-      network,
+      network >=2.4.2.2,
       cereal,
-      ghc-prim
-    main-is: Main.hs
+      ghc-prim,
+      binary,
+      containers,
+      safecopy,
+      acid-state,
+      mtl
+    main-is: SpaceParty/Main.hs
     buildable: True
     hs-source-dirs: src
 
 test-suite test-SpacePartyServer
     build-depends: QuickCheck -any, base -any
     type: exitcode-stdio-1.0
-    main-is: Main.hs
+    main-is: SpaceParty/Main.hs
     buildable: True
     cpp-options: -DMAIN_FUNCTION=testMain
     hs-source-dirs: src

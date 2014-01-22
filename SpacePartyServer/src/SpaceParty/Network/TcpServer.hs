@@ -1,10 +1,11 @@
-module TcpServer
+module SpaceParty.Network.TcpServer
 (
  server
-) where
+)
+where
 
 import Network (PortID(PortNumber))
-import Network.Socket (Socket(..), socket, bind, listen)
+import Network.Socket hiding (recv)
 import qualified Network.Socket.ByteString as NSB
 import qualified Network.Socket.ByteString.Lazy as NSBL
 import Network.Socket.ByteString (sendAll, recv)
@@ -37,10 +38,13 @@ server host port handleRequest = withSocketsDo $ do
 
 initSocket :: String -> PortNumber -> IO(Socket)
 initSocket host port = do
-  let sock = socket AF_INET Stream defaultProtocol
-  let addr = SockAddrInet (PortNumber port) host
-  bind sock addr
+  sock <- socket AF_INET Stream defaultProtocol
+  setSocketOption sock ReuseAddr 1
+  haddr <- inet_addr host
+  let addr = SockAddrInet port haddr
+  bound <- bind sock addr
   listen sock 1
+  return sock
 
 acceptAndProcess :: Socket -> (Socket-> IO()) -> IO()
 acceptAndProcess sock handleRequest = do
@@ -51,5 +55,5 @@ acceptAndProcess sock handleRequest = do
 process :: (Socket -> IO()) -> Socket -> IO()
 process handleRequest sock = do
         handleRequest sock
-        sClose sock
+--        sClose sock
         return ()
