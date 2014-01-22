@@ -2,7 +2,7 @@
 <Config>
   <Options>
     <option_aborterrors>False</option_aborterrors>
-    <option_android_GPU_device>0</option_android_GPU_device>
+    <option_android_GPU_device>1</option_android_GPU_device>
     <option_android_adcolony_enable_V4VC>0</option_android_adcolony_enable_V4VC>
     <option_android_advertising_enable>0</option_android_advertising_enable>
     <option_android_advertising_key></option_android_advertising_key>
@@ -20,8 +20,8 @@
     <option_android_arch_mipsr2sf>false</option_android_arch_mipsr2sf>
     <option_android_arch_x86>True</option_android_arch_x86>
     <option_android_build_version>0</option_android_build_version>
-    <option_android_color_depth>0</option_android_color_depth>
-    <option_android_display_name>SpaceCaptain</option_android_display_name>
+    <option_android_color_depth>1</option_android_color_depth>
+    <option_android_display_name>Space Party</option_android_display_name>
     <option_android_flurry_enable>0</option_android_flurry_enable>
     <option_android_flurry_id></option_android_flurry_id>
     <option_android_google_analytics_enable>0</option_android_google_analytics_enable>
@@ -29,7 +29,7 @@
     <option_android_google_play_id></option_android_google_play_id>
     <option_android_google_tracking_id></option_android_google_tracking_id>
     <option_android_iap_suppress_toast>0</option_android_iap_suppress_toast>
-    <option_android_icade_support>-1</option_android_icade_support>
+    <option_android_icade_support>0</option_android_icade_support>
     <option_android_icon_170>Configs\Default\android\icons\icon170.png</option_android_icon_170>
     <option_android_icon_36>Configs\Default\android\icons\icon36.png</option_android_icon_36>
     <option_android_icon_48>Configs\Default\android\icons\icon48.png</option_android_icon_48>
@@ -52,11 +52,11 @@
     <option_android_mobage_version></option_android_mobage_version>
     <option_android_orient_landscape>true</option_android_orient_landscape>
     <option_android_orient_portrait>true</option_android_orient_portrait>
-    <option_android_orientation>2</option_android_orientation>
+    <option_android_orientation>1</option_android_orientation>
     <option_android_ouya_icon>Configs\Default\android\icons\ouyaIcon.png</option_android_ouya_icon>
-    <option_android_package_company>companyname</option_android_package_company>
+    <option_android_package_company>HotTrouble</option_android_package_company>
     <option_android_package_domain>com</option_android_package_domain>
-    <option_android_package_product>SpaceCaptain</option_android_package_product>
+    <option_android_package_product>SpaceParty</option_android_package_product>
     <option_android_permission_flags>8</option_android_permission_flags>
     <option_android_pocketchange_enable>0</option_android_pocketchange_enable>
     <option_android_pocketchange_id></option_android_pocketchange_id>
@@ -220,9 +220,9 @@
     <option_textureGroup0_targets>9223372036854775807</option_textureGroup0_targets>
     <option_textureGroup_count>1</option_textureGroup_count>
     <option_textureGroups0>Default</option_textureGroups0>
-    <option_tizen_app_id>http://yourdomain/SpaceCaptain</option_tizen_app_id>
+    <option_tizen_app_id>http://hottrouble.com/SpaceCaptain</option_tizen_app_id>
     <option_tizen_build_version>0</option_tizen_build_version>
-    <option_tizen_display_name>SpaceCaptain</option_tizen_display_name>
+    <option_tizen_display_name>Space Party</option_tizen_display_name>
     <option_tizen_flurry_enable>0</option_tizen_flurry_enable>
     <option_tizen_flurry_id></option_tizen_flurry_id>
     <option_tizen_google_analytics_enable>0</option_tizen_google_analytics_enable>
@@ -231,7 +231,7 @@
     <option_tizen_major_version>1</option_tizen_major_version>
     <option_tizen_minor_version>0</option_tizen_minor_version>
     <option_tizen_network_urls></option_tizen_network_urls>
-    <option_tizen_orientation>0</option_tizen_orientation>
+    <option_tizen_orientation>1</option_tizen_orientation>
     <option_tizen_scaling>1</option_tizen_scaling>
     <option_tizen_splash_png>Configs\Default\tizen\splash.png</option_tizen_splash_png>
     <option_tizen_texture_page>1024</option_tizen_texture_page>
@@ -239,7 +239,7 @@
     <option_use_new_audio>True</option_use_new_audio>
     <option_variableerrors>False</option_variableerrors>
     <option_version>030</option_version>
-    <option_version_build>0</option_version_build>
+    <option_version_build>1</option_version_build>
     <option_version_company>Hot Trouble</option_version_company>
     <option_version_copyright>GPLv2</option_version_copyright>
     <option_version_description>A collection of space-themed minigames</option_version_description>
@@ -283,7 +283,7 @@
     <option_win8_texture_page>1024</option_win8_texture_page>
     <option_win8_wide_logo>Configs\Default\Windows8\logos\logo310.png</option_win8_wide_logo>
     <option_windowcolor>clBlack</option_windowcolor>
-    <option_windows_build_version>0</option_windows_build_version>
+    <option_windows_build_version>1</option_windows_build_version>
     <option_windows_company_info>Hot Trouble</option_windows_company_info>
     <option_windows_copyright_info>GPLv2</option_windows_copyright_info>
     <option_windows_description_info>A collection of space-themed minigames</option_windows_description_info>

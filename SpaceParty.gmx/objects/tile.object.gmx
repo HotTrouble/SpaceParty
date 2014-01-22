@@ -41,11 +41,11 @@ if(sprite_index==gray_spr)
   
   if(sprite_index==purple_spr)
   {
-    room_goto(engineer_win);
+    ChangeRoom(engineer_win);
   }
   else if(global.tilesLeft==0)
   {
-    room_goto(engineer_lose);
+    ChangeRoom(engineer_lose);
   }
 }
 </string>
