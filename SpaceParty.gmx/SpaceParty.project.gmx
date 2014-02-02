@@ -30,7 +30,6 @@
       <sprite>sprites\purple_spr</sprite>
     </sprites>
     <sprites name="ship">
-      <sprite>sprites\mainChar</sprite>
       <sprite>sprites\console_spr</sprite>
       <sprite>sprites\scout_spr</sprite>
       <sprite>sprites\station_spr</sprite>
@@ -38,9 +37,23 @@
     </sprites>
     <sprites name="title">
       <sprite>sprites\scbutton</sprite>
+      <sprite>sprites\wahrk_spr</sprite>
+      <sprite>sprites\hottrouble_spr</sprite>
       <sprite>sprites\sebutton</sprite>
     </sprites>
     <sprite>sprites\back_spr</sprite>
+    <sprites name="characters">
+      <sprites name="mainChar">
+        <sprite>sprites\mainChar</sprite>
+        <sprite>sprites\mainChar_talking</sprite>
+        <sprite>sprites\mainChar_walking</sprite>
+      </sprites>
+      <sprites name="mainChar2">
+        <sprite>sprites\mainChar2_standing</sprite>
+        <sprite>sprites\mainChar2_talking</sprite>
+        <sprite>sprites\mainChar2_walking</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\titlescreen</background>
@@ -87,6 +100,8 @@
       <object>objects\captain_button</object>
       <object>objects\engineer_button</object>
       <object>objects\qexil_button</object>
+      <object>objects\wahrk_button</object>
+      <object>objects\hottrouble_button</object>
     </objects>
     <objects name="captain">
       <object>objects\play_control</object>
@@ -124,7 +139,6 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\init</room>
     <room>rooms\title</room>
     <rooms name="captain">
       <room>rooms\captain_play</room>

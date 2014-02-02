@@ -6,19 +6,19 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>50</bbox_left>
-  <bbox_right>79</bbox_right>
-  <bbox_top>26</bbox_top>
-  <bbox_bottom>99</bbox_bottom>
+  <bbox_left>17</bbox_left>
+  <bbox_right>291</bbox_right>
+  <bbox_top>2</bbox_top>
+  <bbox_bottom>53</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>128</width>
-  <height>128</height>
+  <width>300</width>
+  <height>60</height>
   <frames>
-    <frame index="0">images\mainChar_0.png</frame>
+    <frame index="0">images\hottrouble_spr_0.png</frame>
   </frames>
 </sprite>

@@ -2,6 +2,7 @@
 var dest, dh, dw, width, height, stretchWidth, aspect, offset;
 dest=argument0;
 
+/*
 window_set_color(c_black);
 
 if(os_type==os_windows || os_type==os_macosx)
@@ -52,5 +53,5 @@ show_debug_message("dw: " + string(dw));
 show_debug_message("dh: " + string(dh));  
 
 room_set_view(dest,0,1,0,0,dw,dh,offset,0,dw,dh,-1,-1,-1,-1,-1);
-//room_set_view(dest,0,1,0,0,800,480,(800-640)/2,0,800,480,-1,-1,-1,-1,-1);
+*/
 room_goto(dest);
