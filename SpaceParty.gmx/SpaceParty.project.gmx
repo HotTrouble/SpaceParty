@@ -76,6 +76,7 @@
       <script>scripts\Who.gml</script>
       <script>scripts\Join.gml</script>
       <script>scripts\ReceiveNetwork.gml</script>
+      <script>scripts\AddShip.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -119,6 +120,7 @@
     </objects>
     <objects name="qexil">
       <object>objects\qexil_ships_control</object>
+      <object>objects\qexil_add_ship</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -138,7 +140,8 @@
       <room>rooms\qexil_ships</room>
     </rooms>
   </rooms>
-  <constants number="5">
+  <constants number="6">
+    <constant name="ADD_SHIP">65</constant>
     <constant name="JOIN">74</constant>
     <constant name="WHO">79</constant>
     <constant name="WHERE">87</constant>

@@ -12,8 +12,10 @@ for (hexY=0; hexY<height; hexY++)
         if(egrid[hexX,hexY]==1)
         {
             pos=getTilePosition(hexX,hexY);
-            obj_temp = instance_create(pos[0], pos[1], tileType) 
+            obj_temp = instance_create(pos[0], pos[1], tileType);
         
+            obj_temp.image_xscale=global.hexScale;
+            obj_temp.image_yscale=global.hexScale;
             obj_temp.hexX=hexX;
             obj_temp.hexY=hexY;
             obj_temp.image_speed=0;

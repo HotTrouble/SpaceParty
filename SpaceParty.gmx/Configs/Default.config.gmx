@@ -121,11 +121,11 @@
     <option_ios_advertising_enable>0</option_ios_advertising_enable>
     <option_ios_advertising_key></option_ios_advertising_key>
     <option_ios_advertising_type>iAds</option_ios_advertising_type>
-    <option_ios_app_id></option_ios_app_id>
-    <option_ios_build_version>0</option_ios_build_version>
-    <option_ios_certificate>&lt; Press refresh to fetch certificate list from Mac&gt;</option_ios_certificate>
-    <option_ios_device_type>3</option_ios_device_type>
-    <option_ios_display_name>SpaceCaptain</option_ios_display_name>
+    <option_ios_app_id>com.hottrouble.SpaceParty</option_ios_app_id>
+    <option_ios_build_version>1</option_ios_build_version>
+    <option_ios_certificate>iPhone Developer: Brandon Wiley (4HHRZU3687)</option_ios_certificate>
+    <option_ios_device_type>1</option_ios_device_type>
+    <option_ios_display_name>Space Party</option_ios_display_name>
     <option_ios_flurry_enable>0</option_ios_flurry_enable>
     <option_ios_flurry_id></option_ios_flurry_id>
     <option_ios_google_analytics_enable>0</option_ios_google_analytics_enable>
@@ -149,10 +149,10 @@
     <option_ios_major_version>1</option_ios_major_version>
     <option_ios_minor_version>0</option_ios_minor_version>
     <option_ios_orient_landscape>-1</option_ios_orient_landscape>
-    <option_ios_orient_landscape_right>-1</option_ios_orient_landscape_right>
-    <option_ios_orient_portrait>-1</option_ios_orient_portrait>
-    <option_ios_orient_portrait_upside_down>-1</option_ios_orient_portrait_upside_down>
-    <option_ios_provisioning>&lt; Press refresh to fetch provisioning list from Mac&gt;</option_ios_provisioning>
+    <option_ios_orient_landscape_right>0</option_ios_orient_landscape_right>
+    <option_ios_orient_portrait>0</option_ios_orient_portrait>
+    <option_ios_orient_portrait_upside_down>0</option_ios_orient_portrait_upside_down>
+    <option_ios_provisioning>SpaceParty-dev - com.HotTrouble.SpaceParty</option_ios_provisioning>
     <option_ios_set_device_id></option_ios_set_device_id>
     <option_ios_splash_png>Configs\Default\ios\splash.png</option_ios_splash_png>
     <option_ios_texture_page>1024</option_ios_texture_page>

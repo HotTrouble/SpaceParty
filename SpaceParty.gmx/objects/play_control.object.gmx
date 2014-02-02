@@ -42,8 +42,9 @@
 
 global.hex_height=32;
 global.hex_width=32;
-global.xoffset=310;
-global.yoffset=130;
+global.xoffset=535;
+global.yoffset=100;
+global.hexScale=2;
 
 global.tilesLeft=0;
 
@@ -104,6 +105,8 @@ Generate_Grid(5, 5, egrid, hexagon);
 global.numEnemies=0;
 global.numSpawners=0;
 instance_create(0, 0, player_ship);
+player_ship.image_xscale=1.6;
+player_ship.image_yscale=1.6;
 Move_Ship(0,2);
 </string>
           </argument>

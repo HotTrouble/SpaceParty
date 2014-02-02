@@ -42,8 +42,9 @@
 
 global.hex_height=32;
 global.hex_width=32;
-global.xoffset=310;
-global.yoffset=130;
+global.xoffset=635;
+global.yoffset=200;
+global.hexScale=1.5;
 
 global.tilesLeft=0;
 
