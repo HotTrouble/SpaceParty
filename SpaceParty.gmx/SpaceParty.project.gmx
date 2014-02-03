@@ -44,7 +44,7 @@
     <sprite>sprites\back_spr</sprite>
     <sprites name="characters">
       <sprites name="mainChar">
-        <sprite>sprites\mainChar</sprite>
+        <sprite>sprites\mainChar_standing</sprite>
         <sprite>sprites\mainChar_talking</sprite>
         <sprite>sprites\mainChar_walking</sprite>
       </sprites>

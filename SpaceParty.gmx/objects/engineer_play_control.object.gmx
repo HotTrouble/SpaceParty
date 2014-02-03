@@ -40,11 +40,11 @@
         [-1, 0, 0, 0,-1,],
 */        
 
-global.hex_height=32;
-global.hex_width=32;
+global.hex_height=64;
+global.hex_width=64;
 global.xoffset=535;
 global.yoffset=100;
-global.hexScale=2;
+global.hexScale=1;
 
 global.tilesLeft=0;
 
@@ -109,7 +109,7 @@ Generate_Grid(5, 5, egrid, tile);
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1</string>
+            <string>0.1</string>
           </argument>
         </arguments>
       </action>

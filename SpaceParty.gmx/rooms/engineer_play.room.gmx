@@ -50,10 +50,10 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="player" x="288" y="288" name="inst_9852F256" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="player" x="283" y="294" name="inst_9852F256" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="engineer_play_control" x="34" y="26" name="inst_601B5213" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="nextTile" x="944" y="8" name="inst_537DF0C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="station" x="32" y="136" name="inst_4F5B9042" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="nextTile" x="944" y="8" name="inst_537DF0C4" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="station" x="34" y="132" name="inst_4F5B9042" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="reactor" x="288" y="288" name="inst_19C17B23" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="ach_red" x="739" y="49" name="inst_21F4DA36" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="ach_orange" x="768" y="49" name="inst_96AD95C3" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
