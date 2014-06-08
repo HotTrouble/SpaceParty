@@ -2,11 +2,24 @@
 var dest, dh, dw, width, height, stretchWidth, aspect, offset;
 dest=argument0;
 
+/*
 window_set_color(c_black);
 
-if(os_type==os_android || os_type==os_tizen)
+if(os_type==os_windows || os_type==os_macosx)
 {
-  show_debug_message("Resizing for Android");
+  dw=1136
+  dh=640
+  offset=0;
+}
+else if(os_type==os_ios)
+{
+  dw=1136;
+  dh=640;
+  offset=0;
+}
+else if(os_type==os_android)
+{
+  show_debug_message("Resizing for mobile");
   dw=display_get_width();
   dh=display_get_height();
     
@@ -31,8 +44,8 @@ if(os_type==os_android || os_type==os_tizen)
 }
 else
 {
-  dw=640
-  dh=480
+  dw=1136;
+  dh=640;
   offset=0;
 }
 
@@ -40,5 +53,5 @@ show_debug_message("dw: " + string(dw));
 show_debug_message("dh: " + string(dh));  
 
 room_set_view(dest,0,1,0,0,dw,dh,offset,0,dw,dh,-1,-1,-1,-1,-1);
-//room_set_view(dest,0,1,0,0,800,480,(800-640)/2,0,800,480,-1,-1,-1,-1,-1);
+*/
 room_goto(dest);

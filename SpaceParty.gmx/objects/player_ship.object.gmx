@@ -188,8 +188,8 @@ var pos,xx,yy;
 
 pos=getTilePosition(destX, destY);
 
-xx=pos[0]+8;
-yy=pos[1]+8;
+xx=pos[0]+16;
+yy=pos[1]+16;
 
 if(speed&gt;0)
 {
@@ -206,7 +206,7 @@ if(speed&gt;0)
     }
     else
     {
-        move_towards_point(xx, yy, 5);
+        move_towards_point(xx, yy, 8);
     }
 }
 </string>

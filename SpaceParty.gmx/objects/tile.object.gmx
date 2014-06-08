@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="6" enumb="0">
+    <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -35,6 +35,8 @@ if(sprite_index==gray_spr)
   if(sprite_index==red_spr)
   {
     ach_red.sprite_index=red_spr;
+    ach_red.image_xscale=0.25;
+    ach_red.image_yscale=0.25;
   }  
   
   while(checkMatches()) {};

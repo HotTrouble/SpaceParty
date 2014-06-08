@@ -24,6 +24,8 @@ if(
     pos=getTilePosition(hexX,hexY);
     obj_temp = instance_create(pos[0], pos[1], enemy_ship);
 
+    obj_temp.image_xscale=1.6;
+    obj_temp.image_yscale=1.6;
     obj_temp.x=pos[0];
     obj_temp.y=pos[1];        
     obj_temp.hexX=hexX;

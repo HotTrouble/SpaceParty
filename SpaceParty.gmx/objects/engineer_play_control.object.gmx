@@ -40,10 +40,11 @@
         [-1, 0, 0, 0,-1,],
 */        
 
-global.hex_height=32;
-global.hex_width=32;
-global.xoffset=310;
-global.yoffset=130;
+global.hex_height=64;
+global.hex_width=64;
+global.xoffset=535;
+global.yoffset=100;
+global.hexScale=1;
 
 global.tilesLeft=0;
 
@@ -81,6 +82,34 @@ egrid=Expand_Grid(5, 5, grid);
 Generate_Grid(5, 5, egrid, tile);
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>541</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_set</functionname>
+        <codestring></codestring>
+        <whoName>player</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>mainChar_talking</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0.1</string>
           </argument>
         </arguments>
       </action>
