@@ -18,8 +18,9 @@ executable SpacePartyServer
       binary,
       containers,
       safecopy,
-      acid-state,
-      mtl
+      acid-state==0.12.1,
+      mtl,
+      Dust-crypto
     main-is: SpaceParty/Main.hs
     buildable: True
     hs-source-dirs: src

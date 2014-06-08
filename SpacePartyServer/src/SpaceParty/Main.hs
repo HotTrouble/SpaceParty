@@ -1,9 +1,10 @@
 {-# LANGUAGE DeriveGeneric, DefaultSignatures #-}
 
-module SpaceParty.Main
+module Main
 (
     main
-) where
+)
+where
 
 import Network.Socket
 import Network.Socket.ByteString.Lazy (sendAll)
@@ -26,7 +27,7 @@ main = do
 
   server host port galaxy process
 
-process :: Galaxy -> Socket -> IO()
+process :: (AcidState Galaxy) -> Socket -> IO()
 process galaxy sock = do
   putStrLn "Reading byte"
   eitherCommand <- tryJust (guard . isEOFError) $ recv sock 1

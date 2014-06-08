@@ -2,7 +2,8 @@
 
 module SpaceParty.World.Sectors
 (
-  Sector(..)
+  Sector(..),
+  sectorForIP
 )
 where
 
@@ -11,7 +12,7 @@ import Data.Bits
 import Data.Binary
 import GHC.Generics
 
-data Sector = Sector Integer Integer deriving (Generic, Show) -- radius angle
+data Sector = Sector Integer Integer deriving (Generic, Show, Ord, Eq) -- radius angle
 instance Binary Sector where
   put (Sector r a) = do
     let r' = ((fromIntegral r)::Word16)

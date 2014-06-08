@@ -21,11 +21,11 @@ import SpaceParty.World.Galaxy
 import SpaceParty.World.Sectors
 import SpaceParty.World.Ships
 
-processCommand :: Char -> Galaxy -> Socket -> IO()
+processCommand :: Char -> (AcidState Galaxy) -> Socket -> IO()
 processCommand 'W' _ sock = whereCommand sock
-processCommand 'O' galaxy sock = who sock
-processCommand 'J' galaxy sock = join sock
-processCommand 'A' galaxy sock = addShip sock
+processCommand 'O' galaxy sock = who galaxy sock
+processCommand 'J' galaxy sock = join galaxy sock
+processCommand 'A' galaxy sock = addShipCommand galaxy sock
 
 data WhereResponse = WhereResponse Sector deriving (Generic, Show)
 instance Binary WhereResponse where
@@ -41,6 +41,12 @@ whereCommand sock = do
   sendAll sock $ encode resp
   return ()
 
+instance Binary Ship where
+  put (Ship name captain engineer) = do
+    put name
+    put captain
+    put engineer
+
 data WhoResponse = WhoResponse [Ship] deriving (Generic, Show)
 instance Binary WhoResponse where
   put (WhoResponse ships) = do
@@ -49,16 +55,16 @@ instance Binary WhoResponse where
     put numShips
     mapM_ put ships
 
-who :: Galaxy -> Socket -> IO()
+who :: (AcidState Galaxy) -> Socket -> IO()
 who galaxy sock = do
   (SockAddrInet port addr) <- getPeerName sock
   let sector = sectorForIP addr
-  ships <- query galaxy $ getShips sector
+  ships <- query galaxy (GetShips sector)
   let resp = WhoResponse ships
   sendAll sock $ encode resp
   return ()
 
-join :: Galaxy -> Socket -> IO()
+join :: (AcidState Galaxy) -> Socket -> IO()
 join galaxy sock = do
   (SockAddrInet port addr) <- getPeerName sock
   let sector = sectorForIP addr
@@ -72,8 +78,8 @@ instance Binary AddShipResponse where
     put 'A'
     put ship
 
-addShip :: Galaxy -> Socket -> IO()
-addShip galaxy sock = do
+addShipCommand :: (AcidState Galaxy) -> Socket -> IO()
+addShipCommand galaxy sock = do
   (SockAddrInet port addr) <- getPeerName sock
   let sector = sectorForIP addr
   let resp = WhoResponse []

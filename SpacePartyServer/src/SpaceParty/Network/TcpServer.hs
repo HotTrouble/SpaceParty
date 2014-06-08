@@ -13,6 +13,9 @@ import Data.ByteString.Lazy (ByteString, fromChunks)
 import Control.Monad (forever)
 import qualified Data.ByteString.Lazy as BL
 import qualified Data.ByteString as B
+import Data.Acid
+
+import SpaceParty.World.Galaxy
 
 type Host = SockAddr
 
@@ -30,10 +33,10 @@ recvList sock = do
             next <- recvList sock
             return (input:next)
 
-server :: String -> PortNumber -> (Socket -> IO()) -> IO()
-server host port handleRequest = withSocketsDo $ do
+server :: String -> PortNumber -> (AcidState Galaxy) -> ((AcidState Galaxy) -> Socket -> IO()) -> IO()
+server host port galaxy handleRequest = withSocketsDo $ do
         sock <- initSocket host port
-        forever $ acceptAndProcess sock handleRequest
+        forever $ acceptAndProcess sock galaxy handleRequest
         sClose sock
 
 initSocket :: String -> PortNumber -> IO(Socket)
@@ -46,14 +49,14 @@ initSocket host port = do
   listen sock 1
   return sock
 
-acceptAndProcess :: Socket -> (Socket-> IO()) -> IO()
-acceptAndProcess sock handleRequest = do
+acceptAndProcess :: Socket -> (AcidState Galaxy) -> ((AcidState Galaxy) -> Socket-> IO()) -> IO()
+acceptAndProcess sock galaxy handleRequest = do
     (s, _) <- accept sock
     setSocketOption s NoDelay 1
-    process handleRequest s
+    process handleRequest galaxy s
 
-process :: (Socket -> IO()) -> Socket -> IO()
-process handleRequest sock = do
-        handleRequest sock
+process :: ((AcidState Galaxy) -> Socket -> IO()) -> (AcidState Galaxy) -> Socket -> IO()
+process handleRequest galaxy sock = do
+        handleRequest galaxy sock
 --        sClose sock
         return ()
